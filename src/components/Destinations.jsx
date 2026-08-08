@@ -186,15 +186,7 @@ const Destinations = () => {
                         ))}
                     </div>
 
-                    {/* Character Floating on top of cards */}
-                    <div className="traveler-asset absolute pointer-events-none z-20 w-[60%] select-none">
-                        <img
-                            src="/futuristic_orange_traveler_v2.png"
-                            alt="Futuristic Traveler"
-                            className="w-full h-auto drop-shadow-[0_45px_45px_rgba(0,0,0,0.6)]"
-                            onError={(e) => { e.target.src = "https://placehold.co/600x800/ff6d38/000000?text=ZYVOX+EXPLORER"; }}
-                        />
-                    </div>
+
                 </div>
             </div>
         </section>
