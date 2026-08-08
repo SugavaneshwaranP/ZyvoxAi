@@ -125,7 +125,7 @@ const Destinations = () => {
         <section
             id="destinations"
             ref={sectionRef}
-            className="w-full min-h-screen bg-[#7c3aed] relative overflow-hidden flex flex-col justify-center py-14 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 lg:px-20"
+            className="w-full min-h-screen bg-[#7c3aed] relative overflow-hidden flex flex-col justify-center py-24 px-10 md:px-20"
         >
             {/* The Diagonal Wipe Transition */}
             <SectionWipe containerRef={sectionRef} />
@@ -137,12 +137,12 @@ const Destinations = () => {
                 </svg>
             </div>
 
-            <div ref={contentRef} className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 items-center max-w-7xl mx-auto w-full">
+            <div ref={contentRef} className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center max-w-7xl mx-auto w-full">
                 {/* Left Content */}
-                <div className="flex flex-col items-start space-y-6 sm:space-y-8 md:space-y-12">
+                <div className="flex flex-col items-start space-y-12">
                     <span className="text-white/60 font-black uppercase tracking-[0.4em] text-xs">Your Navigator</span>
 
-                    <h2 className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-[0.9]">
+                    <h2 className="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9]">
                         <DecryptedText text="Exploring shouldn't" animateOn="view" revealDirection="start" speed={40} className="text-white" encryptedClassName="text-white/30" /> <br />
                         <span className="text-black bg-white px-2 inline-block my-1">
                             <DecryptedText text="cost your privacy." animateOn="view" revealDirection="start" speed={40} delay={0.5} className="text-black" encryptedClassName="text-black/30" />
@@ -166,7 +166,7 @@ const Destinations = () => {
                 </div>
 
                 {/* Right Visual: Scrolling Destination Cards */}
-                <div className="relative h-[320px] sm:h-[420px] md:h-[520px] lg:h-[600px] overflow-hidden flex items-center justify-center">
+                <div className="relative h-[600px] overflow-hidden flex items-center justify-center">
                     <div className="dest-cards-container flex flex-col gap-8 py-20">
                         {[
                             { name: "Tokyo", img: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=600&h=400" },
@@ -176,10 +176,10 @@ const Destinations = () => {
                             { name: "Paris", img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&h=400" },
                             { name: "Kyoto", img: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&h=400" }
                         ].map((dest, i) => (
-                            <div key={i} className="dest-card relative w-[clamp(220px,72vw,400px)] aspect-[4/3] bg-black border-[3px] sm:border-[4px] border-black rounded-2xl sm:rounded-3xl overflow-hidden shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] group hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
+                            <div key={i} className="dest-card relative w-[300px] md:w-[400px] aspect-[4/3] bg-black border-[4px] border-black rounded-3xl overflow-hidden shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] group hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
                                 <img src={dest.img} alt={dest.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4 sm:p-6">
-                                    <span className="text-white font-black text-lg sm:text-xl md:text-2xl uppercase tracking-tighter italic">{dest.name}</span>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                                    <span className="text-white font-black text-2xl uppercase tracking-tighter italic">{dest.name}</span>
                                     <span className="text-white/60 font-bold text-[10px] uppercase tracking-widest mt-1">Limited Availability</span>
                                 </div>
                             </div>

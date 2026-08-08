@@ -11,8 +11,8 @@ const WorkflowCard = ({ title, subtext, color, shape, index, Icon }) => {
 
     const getCardStyle = () => {
         let borderRadius = '60px';
-        let width = 'clamp(220px, 72vw, 380px)';
-        let height = 'clamp(220px, 72vw, 380px)';
+        let width = '380px';
+        let height = '380px';
 
         if (shape === 'circle') {
             borderRadius = '50%';
@@ -33,17 +33,17 @@ const WorkflowCard = ({ title, subtext, color, shape, index, Icon }) => {
             <motion.div
                 ref={cardRef}
                 whileHover={{ scale: 1.05, rotate: index % 2 === 0 ? 2 : -2 }}
-                className="flex flex-col items-center justify-center p-6 sm:p-8 md:p-12 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-4 border-black/5"
+                className="flex flex-col items-center justify-center p-12 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-4 border-black/5"
                 style={getCardStyle()}
             >
                 {/* Icon Container */}
-                <div className="mb-4 sm:mb-6 flex items-center justify-center">
-                    <Icon size={48} strokeWidth={1.5} className="text-black/80 drop-shadow-lg sm:w-16 sm:h-16 md:w-20 md:h-20" />
+                <div className="mb-6 flex items-center justify-center">
+                    <Icon size={80} strokeWidth={1.5} className="text-black/80 drop-shadow-lg" />
                 </div>
 
                 {/* Text Content */}
                 <div className="text-center">
-                    <h3 className="text-black text-2xl sm:text-3xl md:text-4xl font-[1000] uppercase tracking-tighter leading-none mb-2">
+                    <h3 className="text-black text-4xl font-[1000] uppercase tracking-tighter leading-none mb-2">
                         {title}
                     </h3>
                     <p className="text-black/60 text-xs font-black uppercase tracking-[0.2em]">
@@ -152,7 +152,7 @@ const HowItWorks = () => {
                 ))}
             </div>
 
-            <div className="px-4 sm:px-8 md:px-16 mb-8 sm:mb-12 md:mb-16 relative z-10">
+            <div className="px-16 mb-16 relative z-10">
                 <h2 className="text-white text-[clamp(2.5rem,6vw,9rem)] font-[1000] uppercase tracking-tighter leading-[0.8]">
                     Workflow <br />
                     <span className="text-white/10 uppercase italic">Architectures</span>
@@ -162,7 +162,7 @@ const HowItWorks = () => {
             <div className="relative z-10 w-full overflow-hidden flex items-center">
                 <div
                     ref={scrollContainerRef}
-                    className="flex items-center gap-4 sm:gap-8 md:gap-16 h-max px-4 sm:px-8 md:px-16 pr-[40vw]"
+                    className="flex items-center gap-16 h-max px-16 pr-[40vw]"
                 >
                     {workflowSteps.map((step, index) => (
                         <WorkflowCard
@@ -175,7 +175,7 @@ const HowItWorks = () => {
             </div>
 
             {/* Side Label */}
-            <div className="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2 rotate-90 z-10">
+            <div className="absolute right-12 top-1/2 -translate-y-1/2 rotate-90 z-10">
                 <span className="text-white/5 font-mono text-[10px] tracking-[2em] whitespace-nowrap">SYSTEM_DEPLOYMENT</span>
             </div>
 

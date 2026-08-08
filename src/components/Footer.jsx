@@ -46,18 +46,18 @@ const Footer = () => {
                     style={{ scale: textScale, opacity: textOpacity }}
                     className="relative z-10 flex flex-col items-center text-center px-4"
                 >
-                    <h1 className="text-white text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.85]">
+                    <h1 className="text-white text-7xl md:text-9xl font-black uppercase tracking-tighter leading-[0.85]">
                         Designing <br /> Your Next <br /> Odyssey
                     </h1>
 
                     {/* Badges - Positioned exactly as template */}
-                    <motion.div style={{ y: badgeY1 }} className="absolute top-0 -left-10 bg-[#D94827] px-3 py-1 rounded-lg hidden sm:flex items-center gap-2 text-xs font-bold text-white rotate-[-5deg]">
+                    <motion.div style={{ y: badgeY1 }} className="absolute top-0 -left-10 bg-[#D94827] px-3 py-1 rounded-lg flex items-center gap-2 text-xs font-bold text-white rotate-[-5deg]">
                         <Layout size={14} /> G.A.T.E.S.
                     </motion.div>
-                    <motion.div style={{ y: badgeY2 }} className="absolute bottom-1/4 -right-5 bg-[#6366F1] px-3 py-1 rounded-lg hidden sm:flex items-center gap-2 text-xs font-bold text-white rotate-[8deg]">
+                    <motion.div style={{ y: badgeY2 }} className="absolute bottom-1/4 -right-5 bg-[#6366F1] px-3 py-1 rounded-lg flex items-center gap-2 text-xs font-bold text-white rotate-[8deg]">
                         <Activity size={14} /> ACTIVE_SYNC
                     </motion.div>
-                    <motion.div className="absolute bottom-0 left-1/4 bg-[#FACC15] px-3 py-1 rounded-lg hidden sm:flex items-center gap-2 text-xs font-bold text-black border border-black/10">
+                    <motion.div className="absolute bottom-0 left-1/4 bg-[#FACC15] px-3 py-1 rounded-lg flex items-center gap-2 text-xs font-bold text-black border border-black/10">
                         <LinkIcon size={14} /> CONNECTIONS
                     </motion.div>
                 </motion.div>
@@ -89,11 +89,11 @@ const Footer = () => {
                 {/* FINAL CONTENT SECTION */}
                 <motion.div
                     style={{ opacity: contentOpacity, y: contentY }}
-                    className="absolute inset-0 z-30 bg-white flex flex-col p-4 sm:p-6 md:p-12"
+                    className="absolute inset-0 z-30 bg-white flex flex-col p-6 md:p-12"
                 >
-                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-center max-w-7xl mx-auto w-full">
+                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-7xl mx-auto w-full">
                         {/* Travel Illustration */}
-                        <div className="bg-gray-100 rounded-2xl sm:rounded-3xl h-[28vh] sm:h-[35vh] md:h-full flex items-center justify-center overflow-hidden border border-gray-200">
+                        <div className="bg-gray-100 rounded-3xl h-[45vh] md:h-full flex items-center justify-center overflow-hidden border border-gray-200">
                             <img
                                 src="/assets/features/wp4069431.jpg"
                                 alt="Travel Destination"
@@ -102,9 +102,9 @@ const Footer = () => {
                         </div>
 
                         {/* CTA Card */}
-                        <div className="bg-[#6366F1] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 text-white flex flex-col justify-between h-full shadow-2xl">
+                        <div className="bg-[#6366F1] rounded-3xl p-10 text-white flex flex-col justify-between h-full shadow-2xl">
                             <div>
-                                <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-3 sm:mb-4 tracking-tighter leading-none">Ready to <br /> Depart?</h2>
+                                <h2 className="text-5xl md:text-7xl font-bold mb-4 tracking-tighter leading-none">Ready to <br /> Depart?</h2>
                                 <p className="text-indigo-100 font-medium text-lg">Join the community of travelers reshaping global exploration with AI precision.</p>
                             </div>
                             <Link to="/signup" className="mt-8 bg-black text-white rounded-full py-4 px-8 flex items-center justify-between font-bold group hover:bg-[#D94827] transition-all duration-300">
@@ -118,7 +118,7 @@ const Footer = () => {
                     </div>
 
                     {/* Footer Area */}
-                    <footer className="mt-6 sm:mt-8 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 border-t border-gray-100 pt-6 sm:pt-8 text-black w-full max-w-7xl mx-auto mb-6 sm:mb-10">
+                    <footer className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-8 border-t border-gray-100 pt-8 text-black w-full max-w-7xl mx-auto mb-10">
                         <div>
                             <h4 className="font-bold text-gray-400 uppercase text-[10px] tracking-widest mb-4">Experience</h4>
                             <ul className="space-y-2 font-black text-sm uppercase">
@@ -160,7 +160,7 @@ const Footer = () => {
                         initial={{ opacity: 0, y: 50, scale: 0.9 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.9 }}
-                        className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-10 sm:bottom-10 z-[110] bg-white border-[2px] sm:border-[3px] border-black shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] rounded-xl sm:rounded-2xl p-4 sm:p-6 sm:max-w-sm"
+                        className="fixed bottom-10 right-10 z-[110] bg-white border-[3px] border-black shadow-[8px_8px_0px_#000] rounded-2xl p-6 max-w-sm"
                     >
                         <div className="flex items-start gap-4">
                             <div className="bg-[#B6FF33] p-2 rounded-full border-2 border-black">

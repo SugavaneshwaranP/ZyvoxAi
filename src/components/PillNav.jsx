@@ -55,7 +55,7 @@ const PillNav = ({
     const navItems = items || [];
 
     return (
-        <div className="fixed top-0 left-0 w-full z-[99999] pointer-events-none p-3 sm:p-4 md:p-6">
+        <div className="fixed top-0 left-0 w-full z-[99999] pointer-events-none p-6">
             <motion.nav
                 layout
                 initial={false}
@@ -99,7 +99,7 @@ const PillNav = ({
                         marginRight: isDocked ? 0 : 8,
                     }}
                     transition={{ type: "spring", stiffness: 500, damping: 35 }}
-                    className="hidden md:flex items-center gap-1 overflow-hidden whitespace-nowrap"
+                    className="flex items-center gap-1 overflow-hidden whitespace-nowrap"
                 >
                     {navItems.map((item) => {
                         const isActive = activeHref === item.href;
@@ -147,7 +147,7 @@ const PillNav = ({
                         initial={{ opacity: 0, y: -20, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                        className="absolute top-16 sm:top-20 left-3 right-3 sm:left-6 sm:right-6 p-3 sm:p-4 bg-black/95 backdrop-blur-3xl border border-white/10 rounded-2xl sm:rounded-3xl pointer-events-auto md:hidden shadow-[0_40px_100px_rgba(0,0,0,0.9)]"
+                        className="absolute top-24 left-6 right-6 p-4 bg-black/95 backdrop-blur-3xl border border-white/10 rounded-3xl pointer-events-auto md:hidden shadow-[0_40px_100px_rgba(0,0,0,0.9)]"
                     >
                         <motion.div
                             initial="closed"

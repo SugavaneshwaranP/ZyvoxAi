@@ -30,7 +30,7 @@ export const StickyScrollReveal = ({
 
     return (
         <motion.div
-            className="h-full overflow-y-auto flex justify-center relative space-x-0 md:space-x-10 px-3 sm:px-6 md:px-10 no-scrollbar"
+            className="h-full overflow-y-auto flex justify-center relative space-x-10 px-10 no-scrollbar"
             ref={ref}
             style={{
                 scrollbarWidth: 'none',
@@ -40,7 +40,7 @@ export const StickyScrollReveal = ({
             <div className="relative flex items-start px-4">
                 <div className="max-w-xl">
                     {content.map((item, index) => (
-                        <div key={item.title + index} className="my-16 sm:my-28 md:my-40 first:mt-10 sm:first:mt-16 md:first:mt-20 last:mb-28 sm:last:mb-44 md:last:mb-60">
+                        <div key={item.title + index} className="my-40 first:mt-20 last:mb-60">
                             <motion.h2
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{
@@ -49,7 +49,7 @@ export const StickyScrollReveal = ({
                                     scale: activeCard === index ? 1.05 : 1,
                                 }}
                                 transition={{ duration: 0.5, ease: "circOut" }}
-                                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black uppercase tracking-tighter leading-none"
+                                className="text-4xl md:text-5xl font-black text-black uppercase tracking-tighter leading-none"
                             >
                                 {item.title}
                             </motion.h2>
@@ -60,13 +60,13 @@ export const StickyScrollReveal = ({
                                     y: activeCard === index ? 0 : 10,
                                 }}
                                 transition={{ duration: 0.5, ease: "circOut", delay: 0.1 }}
-                                className="text-base sm:text-lg md:text-xl text-black font-bold max-w-sm mt-4 sm:mt-6 md:mt-8 leading-tight"
+                                className="text-xl text-black font-bold max-w-sm mt-8 leading-tight"
                             >
                                 {item.description}
                             </motion.p>
 
                             {/* Mobile Content Display */}
-                            <div className="lg:hidden mt-6 sm:mt-8 h-48 sm:h-56 w-full rounded-2xl border-[3px] border-black overflow-hidden shadow-[6px_6px_0px_#000]">
+                            <div className="lg:hidden mt-10 h-60 w-full rounded-2xl border-[3px] border-black overflow-hidden shadow-[8px_8px_0px_#000]">
                                 {item.content}
                             </div>
                         </div>

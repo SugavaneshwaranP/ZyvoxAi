@@ -16,17 +16,17 @@ const PricingCard = ({ title, price, features, color, buttonText, isPopular }) =
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
             whileHover={{ y: -10, rotate: isPopular ? 1 : -1 }}
-            className={`relative p-5 sm:p-6 md:p-8 rounded-[20px] sm:rounded-[24px] md:rounded-[32px] border-[3px] md:border-[4px] border-black bg-white shadow-[6px_6px_0px_#000] md:shadow-[12px_12px_0px_#000] flex flex-col h-full reveal-item ${isPopular ? 'z-10' : 'z-0'}`}
+            className={`relative p-8 rounded-[32px] border-[4px] border-black bg-white shadow-[12px_12px_0px_#000] flex flex-col h-full reveal-item ${isPopular ? 'z-10' : 'z-0'}`}
         >
             {isPopular && (
                 <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#B6FF33] border-2 border-black px-4 py-1 rounded-full font-black text-xs uppercase tracking-widest shadow-[4px_4px_0px_#000]">
                     Most Popular
                 </div>
             )}
-            <div className="mb-4 sm:mb-6">
-                <h3 className="text-xl sm:text-2xl font-black uppercase mb-2">{title}</h3>
+            <div className="mb-6">
+                <h3 className="text-2xl font-black uppercase mb-2">{title}</h3>
                 <div className="flex items-baseline">
-                    <span className="text-3xl sm:text-4xl md:text-5xl font-[1000] tracking-tighter">₹{price}</span>
+                    <span className="text-5xl font-[1000] tracking-tighter">₹{price}</span>
                     <span className="text-gray-500 font-bold ml-1">/mo</span>
                 </div>
             </div>
@@ -42,7 +42,7 @@ const PricingCard = ({ title, price, features, color, buttonText, isPopular }) =
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 style={{ backgroundColor: color }}
-                className="w-full py-3 sm:py-4 rounded-xl sm:rounded-2xl border-[2px] sm:border-[3px] border-black font-black uppercase text-base sm:text-lg md:text-xl shadow-[4px_4px_0px_#000] md:shadow-[6px_6px_0px_#000] transition-shadow hover:shadow-none min-h-[44px]"
+                className="w-full py-4 rounded-2xl border-[3px] border-black font-black uppercase text-xl shadow-[6px_6px_0px_#000] transition-shadow hover:shadow-none"
             >
                 {buttonText}
             </motion.button>
@@ -85,7 +85,7 @@ const PricingSection = () => {
     ];
 
     return (
-        <section id="pricing" ref={sectionRef} className="relative z-20 bg-[#F8F6E9] py-14 sm:py-20 md:py-32 px-4 sm:px-6 border-t-[4px] sm:border-t-[6px] border-black text-[#111111] font-sans overflow-hidden">
+        <section id="pricing" ref={sectionRef} className="relative z-20 bg-[#F8F6E9] py-32 px-6 border-t-[6px] border-black text-[#111111] font-sans overflow-hidden">
             <ScrollReveal
                 selector=".reveal-item"
                 baseRotation={4}
@@ -93,29 +93,29 @@ const PricingSection = () => {
                 containerClassName="max-w-7xl mx-auto"
                 scrollContainerRef={null}
             >
-                <div className="flex flex-col items-center mb-10 sm:mb-14 md:mb-20">
-                    <h2 className="text-3xl sm:text-5xl md:text-[8vw] font-[1000] uppercase tracking-tighter leading-none text-center mb-8 sm:mb-10 md:mb-12 reveal-item">
+                <div className="flex flex-col items-center mb-20">
+                    <h2 className="text-6xl md:text-[8vw] font-[1000] uppercase tracking-tighter leading-none text-center mb-12 reveal-item">
                         Plan your next <br /> <span className="text-[#7B61FF]">Adventure</span>
                     </h2>
 
                     {/* TOGGLE */}
-                    <div className="flex items-center gap-2 sm:gap-4 bg-white p-1.5 sm:p-2 rounded-full border-[2px] sm:border-[3px] border-black shadow-[4px_4px_0px_#000] sm:shadow-[6px_6px_0px_#000] reveal-item">
+                    <div className="flex items-center gap-4 bg-white p-2 rounded-full border-[3px] border-black shadow-[6px_6px_0px_#000] reveal-item">
                         <button
                             onClick={() => setBillingCycle('monthly')}
-                            className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full font-black uppercase text-xs sm:text-sm transition-colors ${billingCycle === 'monthly' ? 'bg-[#111111] text-white' : 'text-[#111111] hover:bg-gray-100'}`}
+                            className={`px-8 py-3 rounded-full font-black uppercase text-sm transition-colors ${billingCycle === 'monthly' ? 'bg-[#111111] text-white' : 'text-[#111111] hover:bg-gray-100'}`}
                         >
                             Monthly
                         </button>
                         <button
                             onClick={() => setBillingCycle('yearly')}
-                            className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full font-black uppercase text-xs sm:text-sm transition-colors ${billingCycle === 'yearly' ? 'bg-[#111111] text-white' : 'text-[#111111] hover:bg-gray-100'}`}
+                            className={`px-8 py-3 rounded-full font-black uppercase text-sm transition-colors ${billingCycle === 'yearly' ? 'bg-[#111111] text-white' : 'text-[#111111] hover:bg-gray-100'}`}
                         >
                             Yearly <span className="text-[#B6FF33] ml-1">(-30%)</span>
                         </button>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {pricingData.map((plan) => (
                         <PricingCard
                             key={plan.title}
