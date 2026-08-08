@@ -115,9 +115,9 @@ const Hero = () => {
             {/* Optional subtle grid - although Spotlight has one, adding a custom overlay for depth */}
             <div className="absolute inset-0 h-full w-full bg-grid-white/[0.02] pointer-events-none z-0"></div>
 
-            <div className="flex flex-col items-center w-full max-w-6xl mx-auto z-10 py-10">
-                <div ref={headerRef} className="hero-content text-center mb-12 mt-10">
-                    <h1 className="hero-title text-7xl md:text-[8rem] font-bold mb-4 tracking-tighter leading-[0.9] uppercase flex flex-col items-center">
+            <div className="flex flex-col items-center w-full max-w-6xl mx-auto z-10 py-6 sm:py-8 md:py-10 px-4">
+                <div ref={headerRef} className="hero-content text-center mb-6 sm:mb-8 md:mb-12 mt-6 sm:mt-8 md:mt-10">
+                    <h1 className="hero-title text-4xl sm:text-6xl md:text-[8rem] font-bold mb-4 tracking-tighter leading-[0.9] uppercase flex flex-col items-center">
                         <EncryptedText
                             text="Your travel"
                             revealDelayMs={50}
@@ -136,20 +136,20 @@ const Hero = () => {
                     </h1>
                 </div>
 
-                <div className="w-full max-w-[1200px] flex flex-wrap justify-center gap-4 px-4 overflow-visible">
+                <div className="w-full max-w-[1200px] flex flex-wrap justify-center gap-3 sm:gap-4 px-2 sm:px-4 overflow-visible">
                     {cards.map((card, index) => (
                         <div
                             key={index}
                             ref={el => cardsRef.current[index] = el}
-                            className={`${card.color} ${card.shape} hero-card w-[180px] h-[180px] p-4 flex flex-col justify-center items-center text-black relative group overflow-hidden transition-all duration-300 hover:scale-110 animate-blinking`}
+                            className={`${card.color} ${card.shape} hero-card w-[130px] sm:w-[150px] md:w-[180px] h-[130px] sm:h-[150px] md:h-[180px] p-3 sm:p-4 flex flex-col justify-center items-center text-black relative group overflow-hidden transition-all duration-300 hover:scale-110 animate-blinking`}
                             style={{ animationDelay: `${index * 0.5}s` }}
                         >
-                            <div className="text-5xl mb-3 group-hover:scale-125 transition-transform duration-500">{card.icon}</div>
+                            <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3 group-hover:scale-125 transition-transform duration-500">{card.icon}</div>
                             <div className="text-center">
-                                <h2 className="text-sm font-black uppercase leading-none tracking-tighter mb-1">
+                                <h2 className="text-xs sm:text-sm font-black uppercase leading-none tracking-tighter mb-1">
                                     {card.title}
                                 </h2>
-                                <p className="text-[8px] font-bold opacity-60 uppercase tracking-widest">
+                                <p className="text-[7px] sm:text-[8px] font-bold opacity-60 uppercase tracking-widest">
                                     {card.description}
                                 </p>
                             </div>

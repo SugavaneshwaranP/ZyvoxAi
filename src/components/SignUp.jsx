@@ -49,9 +49,9 @@ const SignUp = () => {
                 </div>
 
                 {/* Right Side - Content */}
-                <div className="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-12 text-center md:text-left">
+                <div className="w-full md:w-1/2 flex flex-col justify-center px-5 sm:px-8 md:px-16 py-8 sm:py-12 text-center md:text-left">
                     <div className="mb-10">
-                        <h1 className="text-6xl font-black text-black leading-[0.9] tracking-tighter mb-4">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-black leading-[0.9] tracking-tighter mb-4">
                             Sign Up to<br />Zyvox AI
                         </h1>
                         <p className="text-lg font-bold text-gray-500">

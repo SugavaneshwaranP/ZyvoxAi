@@ -181,7 +181,7 @@ const Features = () => {
         <section
             id="features"
             ref={sectionRef}
-            className="relative min-h-screen w-full bg-[#ff6d38] overflow-hidden flex flex-col items-center justify-center p-12"
+            className="relative min-h-screen w-full bg-[#ff6d38] overflow-hidden flex flex-col items-center justify-center p-4 sm:p-6 md:p-12"
         >
             {/* Edge Progress Borders */}
             <div ref={el => progressRef.current.top = el} className="absolute top-0 left-0 w-full h-[12px] bg-black z-50 origin-left" />
@@ -221,10 +221,10 @@ const Features = () => {
                 <FloatingElements count={8} containerRef={sectionRef} />
             </div>
 
-            <div className="w-full max-w-7xl mx-auto px-6 h-full flex flex-col items-center justify-center relative z-10">
+            <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 h-full flex flex-col items-center justify-center relative z-10">
                 {/* Header Area */}
-                <div className="text-center mb-8">
-                    <h2 ref={titleRef} className="text-black text-[clamp(3.5rem,7vw,8rem)] font-[1000] uppercase tracking-tighter leading-[0.8]">
+                <div className="text-center mb-6 sm:mb-8">
+                    <h2 ref={titleRef} className="text-black text-[clamp(2.2rem,6vw,8rem)] font-[1000] uppercase tracking-tighter leading-[0.85]">
                         THE NEXT <br />
                         <TextType
                             text={['ERA', 'GEAR', 'PHASE']}
@@ -239,7 +239,7 @@ const Features = () => {
                 </div>
 
                 {/* STICKY SCROLL AREA */}
-                <div className="w-full h-[70vh] rounded-[40px] border-[6px] border-black bg-white shadow-[20px_20px_0px_#000] overflow-hidden">
+                <div className="w-full h-[60vh] sm:h-[65vh] md:h-[70vh] rounded-[24px] md:rounded-[40px] border-[3px] md:border-[6px] border-black bg-white shadow-[8px_8px_0px_#000] md:shadow-[20px_20px_0px_#000] overflow-hidden">
                     <StickyScrollReveal content={content} />
                 </div>
 
